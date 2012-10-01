@@ -13,14 +13,14 @@
   "author": "James Brumond",
   "license": "MIT",
   "dependencies": {
-    "express": "~3.0.0rc4",
+    "express": "3.0.0rc4",
     "merge-recursive": "0.0.3",
     "node-conf": "0.0.4",
     "consts": "0.0.2",
-    "hbs": "~1.0.5",
-    "socket.io": "~0.9.10",
+    "hbs": "1.0.5",
+    "socket.io": "0.9.10",
     "exists-patch": "0.0.0",
-    "json-output": "~0.1.2"
+    "json-output": "0.1.2"
   },
   "devDependencies": {
     "grunt-css": "latest"
