@@ -32,12 +32,56 @@
 	
 </head>
 <body>
-	
-	<h1>This is content from layout.hbs</h1>
-	<div id="content">
-		{{{ body }}}
+
+	<div class="container" id="wrapper">
+		
+		<div id="header-wrapper">
+			<div id="header">
+				<div class="row">
+					<div class="five columns">
+						<h1><a href="/">James Brumond</a></h1>
+					</div>
+					<div class="seven columns" id="nav">
+						<ul class="top-level">
+							<li><a href="/services">Services</a></li>
+							<li><a href="/contact">Contact</a></li>
+							<li><a href="/portfolio">Portfolio</a></li>
+							<li><a href="/open-source">Open Source</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<h2 class="big-heading">
+						Professional Node.js<br />
+						application development
+					</h2>
+				</div>
+			</div>
+		</div>
+		
+		<div id="content-wrapper">
+			<div id="loading"></div>
+			<div id="messages" class="row"></div>
+			<div id="content">
+				{{{ body }}}
+			</div>
+		</div>
+		
+		<div id="footer">
+			<div id="footer-inner">
+				<div class="row">
+					<p>
+						Copyright &copy; {{now "yyyy" }} James Brumond<br />
+						Powered by <a href="http://nodejs.org">Node.js</a>, <a href="http://expressjs.com">Express</a>
+						and <a href="http://socket.io">Socket.IO</a>.
+						Hosted on <a href="http://heroku.com">Heroku</a>.<br />
+						Application running in {{ env.value }} mode.
+					</p>
+				</div>
+			</div>
+		</div>
+		
 	</div>
-	<small>Application running in {{ env.value }} mode.</small>
 	
 	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 	{{#if env.is.development }}
