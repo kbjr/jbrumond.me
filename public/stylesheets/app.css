@@ -1,0 +1,449 @@
+
+body, html {
+	height: 100%;
+	background: #ccc;
+}
+
+::selection {
+	color: #888;
+	background: #222;
+	text-shadow: none;
+}
+
+#wrapper {
+	padding: 0;
+	min-height: 100%;
+	position: relative;
+}
+
+/* ==  Header  == */
+
+#header-wrapper {
+	width: 100%;
+	margin: 0;
+	padding: 0 0 12px;
+	overflow: hidden;
+}
+
+#header {
+	color: #aaa;
+	background: #222 url('../images/bg.png') top left repeat;
+	padding: 50px 10px 25px;
+	box-shadow: 0 6px 6px #111;
+	border-bottom: 35px solid #333;
+}
+
+#header h1 {
+	margin: 0;
+	padding: 0;
+	color: #3a3a3a;
+	font-size: 50px;
+	font-size: 5rem;
+	font-family: Tangerine;
+	text-shadow: -1px -1px 1px #111;
+}
+
+#header h1 a,
+#header h1 a:hover {
+	color: inherit;
+}
+
+#header .big-heading {
+	color: #fff;
+	font-size: 56px;
+	font-size: 5.6rem;
+	font-weight: normal;
+	padding: 50px 50px 25px;
+	font-family: DistrictThin;
+	text-shadow: 0 2px 1px #000;
+}
+
+/* ==  Navigation  == */
+
+#nav ul {
+	margin: 0;
+	padding: 25px 0 0;
+}
+
+#nav li {
+	margin: 0;
+	float: left;
+	font-style: italic;
+	padding-right: 40px;
+}
+
+#nav li:last-of-type {
+	padding-right: 0;
+}
+
+#nav a {
+	font-size: 18px;
+	font-size: 1.8rem;
+	text-shadow: 1px 2px 1px #000;
+}
+
+#header a,
+#footer a {
+	color: #888;
+}
+
+
+#header a:hover,
+#footer a:hover {
+	color: #fff;
+}
+
+#nav ul:after {
+	display: block;
+	visibility: hidden;
+	content: " ";
+	height: 0;
+	line-height: 0;
+	clear: left;
+}
+
+/* ==  Loading/Messages  == */
+
+#loading {
+	width: 150px;
+	height: 75px;
+	margin: auto;
+	display: none;
+}
+
+#messages .msg {
+	color: #05a;
+	margin-top: 3px;
+	padding: 10px;
+	background: #ddf;
+	position: relative;
+	border-radius: 8px;
+	border: 1px #99e solid;
+}
+
+#messages .msg.warn {
+	color: #770;
+	background: #ffc;
+	border-color: #cc3;
+}
+
+#messages .msg.error {
+	color: #900;
+	background: #fce;
+	border-color: #e66;
+}
+
+#messages .msg .close {
+	position: absolute;
+	top: 1px;
+	right: 4px;
+	cursor: pointer;
+}
+
+#messages .msg ul,
+#messages .msg ul li {
+	margin-bottom: 0;
+}
+
+/* ==  Content Area  == */
+
+#content-wrapper {
+	padding: 25px 0 0;
+	min-height: 300px;
+}
+
+#content {
+	
+}
+
+.content-section {
+	padding: 50px 0 100px;
+	border-bottom: 1px #555 solid;
+}
+
+#content .content-section:last-of-type {
+	padding-bottom: 275px;
+	border: 0;
+}
+
+.content-section.darker-1 {
+	background: #88888c;
+	border-color: #aaa;
+}
+
+/* ==  Typography  == */
+
+#content h3 {
+	color: #555;
+	text-shadow: none;
+	font-weight: normal;
+	margin-bottom: 25px;
+}
+
+#content .darker-1 h3 {
+	color: #eee;
+}
+
+#content p {
+	color: #333;
+	line-height: 1.4;
+	font-size: 18px;
+	font-size: 1.8rem;
+	margin: 10px 25px;
+	text-shadow: 0px 1px 1px #eee;
+}
+
+#content .darker-1 p {
+	color: #ddd;
+	text-shadow: 0px 1px 1px #555;
+}
+
+#content a {
+	color: #5B7C8F;
+}
+
+#content .darker-1 a {
+	color: #fff;
+}
+
+#content a:hover {
+	text-decoration: underline;
+}
+
+#content pre {
+	font-size: 16px;
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+/* ==  Clients  == */
+
+#clients {
+	padding: 25px;
+}
+
+.client {
+	display: inline-block;
+}
+
+.client img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* ==  Forms  == */
+
+form fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+	padding: 10px;
+	border: 2px #aaa solid;
+	border-radius: 5px;
+	font: inherit;
+	font-size: 16px;
+	font-size: 1.6rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+	outline: 0;
+	border-color: #26b;
+}
+
+
+form label {
+	display: block;
+	font-size: 13px;
+	line-height: 18px;
+	cursor: pointer;
+	margin-bottom: 9px;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	background: #e3e3e3;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+	box-shadow: inset 0 0 1px 1px #f6f6f6;
+	color: #333;
+	font: bold 12px "helvetica neue", helvetica, arial, sans-serif;
+	line-height: 1;
+	padding: 8px 0 9px;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	width: 150px;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+	background: #d9d9d9;
+	box-shadow: inset 0 0 1px 1px #eaeaea;
+	color: #222;
+	cursor: pointer;
+}
+
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active {
+	background: #d0d0d0;
+	box-shadow: inset 0 0 1px 1px #e3e3e3;
+	color: #000;
+}
+
+/* ==  Contact Form  == */
+
+#contact-form {
+	padding: 15px 50px;
+}
+
+#contact-form ul.radios {
+	margin: 0;
+	padding: 0;
+}
+
+#contact-form ul.radios li {
+	padding-left: 15px;
+	margin: 0;
+}
+
+#contact-form ul.radios input[type="radio"] {
+	position: relative;
+	top: 2px;
+}
+
+#contact-form ul.radios input[type="text"] {
+	margin-top: 8px;
+	font-size: 14px;
+	font-size: 1.4rem;
+	padding: 3px;
+	border-radius: 4px;
+}
+
+#contact-form label.message {
+	margin-left: 25px;
+}
+
+#contact-form textarea {
+	height: 250px;
+}
+
+#contact-form .buttons {
+	position: relative;
+	display: inline-block;
+	padding-right: 35px;
+}
+
+#contact-form .reset,
+#contact-form .submit {
+	margin: 15px 0 0 25px;
+}
+
+#contact-form .buttons .spinner {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 31px;
+	height: 31px;
+}
+
+#contact-form label.required .label:after {
+	content: "*";
+	color: #b00;
+	font-size: 12px;
+	font-size: 1.2rem;
+	position: relative;
+	top: -3px;
+	left: 3px;
+}
+
+/* ==  Social Icons  == */
+
+#content .social-icon {
+	position: relative;
+	padding: 15px 35px;
+}
+
+#content .social-icon a {
+	color: #fff;
+	font-size: 16px;
+	font-size: 1.6rem;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 1px #555;
+	font-family: RockSalt, sans-serif;
+}
+
+#content .social-icon a:hover {
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #222;
+}
+
+#content .social-icon a img {
+	width: 64px;
+	height: 64px;
+}
+
+#content .social-icon a:hover img {
+	
+}
+
+#content .social-icon a span {
+	position: relative;
+	top: -25px;
+}
+
+/* ==  Footer  == */
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-size: 12px;
+	font-size: 1.2rem;
+	padding-top: 12px;
+	overflow: hidden;
+}
+
+#footer-inner {
+	height: 150px;
+	background: #000;
+	border-top: 1px #bbb solid;
+}
+
+#footer p {
+	padding: 50px 0;
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-shadow: 1px 1px 1px #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
