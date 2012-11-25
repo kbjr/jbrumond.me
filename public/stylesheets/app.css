@@ -137,44 +137,6 @@ body, html {
 	position: absolute;
 }
 
-#messages {
-	
-}
-
-	#messages .msg {
-		color: #05a;
-		margin-top: 3px;
-		padding: 10px;
-		background: #ddf;
-		position: relative;
-		border-radius: 8px;
-		border: 1px #99e solid;
-	}
-
-	#messages .msg.warn {
-		color: #770;
-		background: #ffc;
-		border-color: #cc3;
-	}
-
-	#messages .msg.error {
-		color: #900;
-		background: #fce;
-		border-color: #e66;
-	}
-
-		#messages .msg .close {
-			position: absolute;
-			top: 1px;
-			right: 4px;
-			cursor: pointer;
-		}
-
-		#messages .msg ul,
-		#messages .msg ul li {
-			margin-bottom: 0;
-		}
-
 
 
 /* ==  Content Typography  == */
