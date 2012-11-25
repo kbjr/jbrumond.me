@@ -7,6 +7,18 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
+app.get('/about', function(req, res) {
+	res.render('about');
+});
+
+app.get('/services', function(req, res) {
+	res.render('services');
+});
+
+app.get('/open-source', function(req, res) {
+	res.render('open-source');
+});
+
 // ------------------------------------------------------------------
 
 app.io.sockets.on('connection', function(socket) {

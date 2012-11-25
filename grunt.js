@@ -10,14 +10,16 @@ exports.stylesheets = [
 	'public/stylesheets/globals.css',
 	'public/stylesheets/ui.css',
 //	'public/stylesheets/forms.css',
-	'public/stylesheets/orbit.css',
-	'public/stylesheets/reveal.css',
+//	'public/stylesheets/orbit.css',
+//	'public/stylesheets/reveal.css',
 	'public/stylesheets/app.css',
+	'public/stylesheets/pages.css',
 	'public/stylesheets/mobile.css'
 ];
 
 exports.javascripts = [
 	'public/javascripts/jquery-1.7.2.min.js',
+	'public/javascripts/jquery.animation-enhanced.min.js',
 	'public/javascripts/placeholder.js',
 	'public/javascripts/lodash.js',
 	'public/javascripts/eventemitter2.js',

@@ -2,6 +2,7 @@
 yepnope({
 	load: [
 		'/javascripts/jquery-1.7.2.min.js',
+		'/javascripts/jquery.animation-enhanced.min.js',
 		'/javascripts/placeholder.js',
 		'/javascripts/lodash.js',
 		'/javascripts/eventemitter2.js',

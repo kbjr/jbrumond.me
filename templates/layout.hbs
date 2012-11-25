@@ -13,12 +13,13 @@
 	<title>James Brumond</title>
 
 	<link rel="stylesheet" type="text/css" href="/fonts/district-thin/stylesheet.css" />
-	<link rel="stylesheet" type="text/css" href="/fonts/tangerine/stylesheet.css" />
-	<link rel="stylesheet" type="text/css" href="/fonts/rocksalt/stylesheet.css" />
+	<link rel="stylesheet" type="text/css" href="/fonts/architects-daughter/stylesheet.css" />
+	<link rel="stylesheet" type="text/css" href="/fonts/overlock/stylesheet.css" />
 	{{#if env.is.development }}
 	<link rel="stylesheet" type="text/css" href="/stylesheets/globals.css" />
 	<link rel="stylesheet" type="text/css" href="/stylesheets/ui.css" />
 	<link rel="stylesheet" type="text/css" href="/stylesheets/app.css" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/pages.css" />
 	<link rel="stylesheet" type="text/css" href="/stylesheets/mobile.css" />
 	{{else}}
 	<link rel="stylesheet" type="text/css" href="/style.min.css" />
@@ -38,30 +39,25 @@
 		<div id="header-wrapper">
 			<div id="header">
 				<div class="row">
-					<div class="five columns">
-						<h1><a href="/">James Brumond</a></h1>
-					</div>
-					<div class="seven columns" id="nav">
-						<ul class="top-level">
-							<li><a href="/services">Services</a></li>
-							<li><a href="/contact">Contact</a></li>
-							<li><a href="/portfolio">Portfolio</a></li>
-							<li><a href="/open-source">Open Source</a></li>
-						</ul>
-					</div>
+					<h1><a href="/">James Brumond</a></h1>
 				</div>
-				<div class="row">
-					<h2 class="big-heading">
-						Professional Node.js<br />
-						application development
-					</h2>
-				</div>
+			</div>
+		</div>
+		
+		<div id="nav" class="row">
+			<div class="six columns offset-by-six">
+				<ul class="top-level">
+					<li><a href="/about">About</a></li>
+					<li><a href="/services">Services</a></li>
+					<li><a href="/contact">Contact</a></li>
+					<li><a href="/open-source">Open Source</a></li>
+				</ul>
 			</div>
 		</div>
 		
 		<div id="content-wrapper">
 			<div id="loading"></div>
-			<div id="messages" class="row"></div>
+			<div id="messages"></div>
 			<div id="content">
 				{{{ body }}}
 			</div>
@@ -74,8 +70,7 @@
 						Copyright &copy; {{now "yyyy" }} James Brumond<br />
 						Powered by <a href="http://nodejs.org">Node.js</a>, <a href="http://expressjs.com">Express</a>
 						and <a href="http://socket.io">Socket.IO</a>.
-						Hosted on <a href="http://heroku.com">Heroku</a>.<br />
-						Application running in {{ env.value }} mode.
+						Hosted on <a href="http://heroku.com">Heroku</a>.
 					</p>
 				</div>
 			</div>
@@ -83,6 +78,7 @@
 		
 	</div>
 	
+	<!--
 	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 	{{#if env.is.development }}
 	<script type="text/javascript" src="/javascripts/yepnope.js"></script>
@@ -90,6 +86,7 @@
 	{{else}}
 	<script type="text/javascript" src="/app.min.js"></script>
 	{{/if}}
+	-->
 	
 </body>
 </html>
