@@ -7,26 +7,17 @@ module.exports = exports = function(grunt) {
 };
 
 exports.stylesheets = [
-	'public/stylesheets/globals.css',
-	'public/stylesheets/ui.css',
-//	'public/stylesheets/forms.css',
-//	'public/stylesheets/orbit.css',
-//	'public/stylesheets/reveal.css',
-	'public/stylesheets/app.css',
-	'public/stylesheets/pages.css',
-	'public/stylesheets/mobile.css'
+	'public/stylesheets/foundation.css',
+	'public/stylesheets/app.css'
 ];
 
 exports.javascripts = [
-	'public/javascripts/jquery-1.7.2.min.js',
-	'public/javascripts/jquery.animation-enhanced.min.js',
-	'public/javascripts/placeholder.js',
-	'public/javascripts/lodash.js',
-	'public/javascripts/eventemitter2.js',
-	'public/javascripts/spin.js',
-	'public/javascripts/spin.jquery.js',
-	'public/javascripts/app.js',
-	'public/javascripts/main.prod.js'
+	// 'public/javascripts/jquery-1.7.2.min.js',
+	// 'public/javascripts/jquery.animation-enhanced.min.js',
+	// 'public/javascripts/lodash.js',
+	// 'public/javascripts/placeholder.js',
+	// 'public/javascripts/lodash.js',
+	// 'public/javascripts/app.js',
 ];
 
 function init(grunt) {
@@ -51,7 +42,7 @@ function init(grunt) {
 		},
 	// JS Lint
 		lint: {
-			all: ['public/javascripts/main.js', 'public/javascripts/app.js']
+			all: ['public/javascripts/app.js']
 		},
 		jshint: {
 			options: {
@@ -67,7 +58,8 @@ function init(grunt) {
 		}
 	});
 
-	grunt.registerTask('default', 'cssmin lint min');
+	// grunt.registerTask('default', 'cssmin lint min');
+	grunt.registerTask('default', 'cssmin');
 
 
 // Clean
