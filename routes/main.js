@@ -28,6 +28,21 @@ var icons = [
 ];
 
 app.get('/', function(req, res) {
+	// Handle resume.jbrumond.me
+	if (req.headers.host.indexOf('resume') >= 0) {
+		return renderResume(req, res);
+	}
+
 	res.render('index', {icons: icons});
 });
 
+app.get('/resume', renderResume);
+
+// ------------------------------------------------------------------
+
+function renderResume(req, res) {
+	res.render('resume', {
+		isResume: true,
+		titlePrefix: 'R&eacute;sum&eacute; / '
+	});
+}

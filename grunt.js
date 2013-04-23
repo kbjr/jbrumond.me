@@ -6,11 +6,6 @@ module.exports = exports = function(grunt) {
 	init(grunt);
 };
 
-exports.stylesheets = [
-	'public/stylesheets/foundation.css',
-	'public/stylesheets/app.css'
-];
-
 exports.javascripts = [
 	// 'public/javascripts/jquery-1.7.2.min.js',
 	// 'public/javascripts/jquery.animation-enhanced.min.js',
@@ -35,9 +30,19 @@ function init(grunt) {
 		},
 	// CSS Min
 		cssmin: {
-			all: {
-				src: exports.stylesheets,
+			main: {
+				src: [
+					'public/stylesheets/foundation.css',
+					'public/stylesheets/app.css'
+				],
 				dest: 'public/style.min.css'
+			},
+			resume: {
+				src: [
+					'public/stylesheets/foundation.css',
+					'public/stylesheets/resume.css'
+				],
+				dest: 'public/resume.min.css'
 			}
 		},
 	// JS Lint
@@ -68,6 +73,7 @@ function init(grunt) {
 		var path  = require('path');
 
 		fs.unlink(relpath('public/style.min.css'));
+		fs.unlink(relpath('public/resume.min.css'));
 		fs.unlink(relpath('public/app.min.js'));
 
 		function relpath(file) {
