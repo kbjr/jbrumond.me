@@ -1,7 +1,7 @@
 
 body, html {
 	height: 100%;
-	background: #fff url('../images/bg.png') top left repeat;
+	background: #fff;
 }
 
 ::selection {
@@ -17,7 +17,7 @@ body, html {
 }
 
 .row {
-	max-width: 980px;
+	max-width: 1000px;
 }
 
 
@@ -27,25 +27,21 @@ body, html {
 #header-wrapper {
 	width: 100%;
 	margin: 0;
-	padding: 0 0 12px;
+	padding: 0;
 	overflow: hidden;
 }
 
 	#header {
 		color: #aaa;
-		background: #132530;
-		box-shadow: 0 6px 6px #111;
-/*		border-bottom: 35px solid #333;*/
 	}
 
 		#header h1 {
-			color: #fff;
+			color: #666;
 			font-size: 36px;
 			font-size: 3.6rem;
 			font-weight: 500;
 			padding: 15px 0px 10px;
 			font-family: Overlock, sans-serif;
-			text-shadow: 0 2px 1px #012;
 		}
 
 		#header h1 a,
@@ -54,24 +50,35 @@ body, html {
 			text-decoration: none;
 		}
 
+	.contact {
+		padding: 30px 20px;
+		text-align: right;
+		line-height: 1.3;
+		color: #444;
+	}
+
 
 
 /* ==  Content Area  == */
 
 #content {
-	padding: 0;
+	padding: 0 0 100px;
 	min-height: 300px;
 	position: relative;
 }
-
-	.content-section {
-		padding: 50px 0 50px;
+	
+	#content .row {
+		padding: 0 0 0 20px;
 	}
 
-	#content .content-section:last-of-type {
-		padding-bottom: 275px;
-		border: 0;
+	.section {
+		padding: 15px 30px;
 	}
+
+		.section p {
+			margin: 5px 0 0;
+			padding: 0;
+		}
 
 
 
@@ -81,16 +88,32 @@ body, html {
 		color: #555;
 		text-shadow: none;
 		font-weight: normal;
-		margin-bottom: 25px;
+		margin: 35px 0 10px;
 		text-shadow: 1px 1px 1px #fff;
 		font-family: DistrictThin, sans-serif;
+	}
+
+	h3 {
+		padding: 0;
+		margin: 0 0 5px;
+		font-size: 16px;
+		font-size: 1.6rem;
+		font-weight: bold;
+		color: #444;
+	}
+
+	small {
+		font-size: 14px !important;
+		font-size: 1.4rem !important;
+		font-weight: normal;
+		color: #888;
 	}
 
 	p {
 		color: #333;
 		line-height: 1.4;
-		font-size: 18px;
-		font-size: 1.8rem;
+		font-size: 16px;
+		font-size: 1.6rem;
 		margin: 10px 25px;
 		text-shadow: 0px 1px 1px #eee;
 	}
@@ -108,90 +131,14 @@ body, html {
 		font-family: 'Ubuntu Mono', monospace;
 	}
 
-
-
-/* ==  Open source works panels  == */
-
-.open-source {
-	padding: 25px 15px 0;
-}
-
-	.open-source .panel {
-		min-height: 200px;
-		border-radius: 10px;
-		border: 1px transparent solid;
-		background-color: #fff;
-		background-color: rgba(255,255,255,0.4);
-		transition: background-color, border-color 0.25s linear;
+	ul {
+		margin-left: 35px;
 	}
 
-		.open-source .panel:hover {
-			border-color: #ccc;
-			background-color: rgba(255,255,255,0.6);
-		}
-
-		.open-source .panel h3 {
+		ul li {
 			font-size: 16px;
 			font-size: 1.6rem;
-			font-family: Overlock, sans-serif;
 		}
-
-		.open-source .panel p {
-			font-size: 14px;
-			font-size: 1.4rem;
-			margin: 0 0 15px;
-			padding: 0;
-		}
-
-
-
-/* ==  Footer  == */
-
-#footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	font-size: 12px;
-	font-size: 1.2rem;
-	padding-top: 12px;
-	overflow: hidden;
-}
-
-	#footer-inner {
-		height: 150px;
-		background: #132530;
-		border-top: 1px #222 solid;
-	}
-
-		#footer-inner .row {
-			position: relative;
-		}
-
-			#footer p {
-				color: #fff;
-				padding: 50px 0;
-				font-size: 12px;
-				font-size: 1.2rem;
-				text-shadow: 1px 1px 1px #012;
-			}
-
-			#footer a {
-				color: #888;
-			}
-
-			#footer a:hover {
-				color: #fff;
-			}
-
-			#footer .social-icons {
-				position: absolute;
-				top: 50px;
-				right: 0px;
-			}
-
-				#footer .social-icons li {
-					display: inline-block;
-				}
 
 
 
