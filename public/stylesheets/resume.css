@@ -147,6 +147,35 @@ body, html {
 			font-size: 1.6rem;
 		}
 
+	.section ul {
+		margin-top: 20px;
+	}
+
+	dl {
+		/**/
+	}
+
+		dl dt {
+			/**/
+		}
+
+		dl dd {
+			color: #333;
+			line-height: 1.4;
+			font-size: 16px;
+			font-size: 1.6rem;
+			margin: 5px 15px 20px;
+		}
+
+.footer div {
+	font-size: 13px;
+	font-size: 1.3rem;
+	color: #666;
+	margin-top: 75px;
+	padding: 10px 0 0 15px;
+	border-top: 1px #999 solid;
+}
+
 
 
 /* ==  Mobile styles  == */
