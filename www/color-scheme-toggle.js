@@ -16,23 +16,25 @@
 	document.body.style.transition = `background ${animation}`;
 
 
+	const styles = `
+		:host {
+			display: contents;
+		}
 
-	const template = `
-		<style>
-			:host {
-				display: contents;
-			}
+		:host .wrapper {
+			width: 3rem;
+			height: 3rem;
+			padding: 0.5rem;
+			background: var(--color-bg-light);
+			border-radius: 100%;
+			cursor: pointer;
+			overflow: hidden;
+			position: relative;
+			transition: background ${animation};
+		}
 
-			:host .wrapper {
-				width: 3rem;
-				height: 3rem;
-				padding: 0.5rem;
-				background: var(--background-layer-light);
-				border-radius: 100%;
-				cursor: pointer;
-				overflow: hidden;
-				position: relative;
-				transition: background ${animation};
+			:host .wrapper:hover {
+				background: var(--color-bg-accent);
 			}
 
 			:host .wrapper .icons {
@@ -44,25 +46,21 @@
 				pointer-events: none;
 			}
 
-			:host .wrapper .icons[data-mode='light'] {
-				/*  */
-			}
+				:host .wrapper .icons[data-mode='light'] {
+					/*  */
+				}
 
-			:host .wrapper .icons[data-mode='dark'] {
-				transform: translateX(-3rem);
-			}
+				:host .wrapper .icons[data-mode='dark'] {
+					transform: translateX(-3rem);
+				}
 
-			:host .wrapper:hover {
-				/* background: var(--background-layer-heavy); */
-			}
-
-			:host jb-icon {
-				--icon-size: 3rem;
-				transition: opacity ${animation};
-			}
+		:host jb-icon {
+			--icon-size: 3rem;
+			transition: opacity ${animation};
+		}
 
 			:host jb-icon[icon='sun'] {
-				color: #ffde85;
+				color: var(--color-sun);
 				filter: drop-shadow(1px 1px 1px #555);
 			}
 
@@ -71,15 +69,18 @@
 			}
 
 			:host jb-icon[icon='moon'] {
-				color: #85acff;
+				color: var(--color-moon);
 				filter: drop-shadow(1px 1px 0.5px #bbb);
 			}
 
 			:host [data-mode='light'] jb-icon[icon='moon'] {
 				opacity: 0;
 			}
-		</style>
-		<div class="wrapper" title="Toggle Light / Dark Mode">
+	`;
+
+	const template = `
+		<style>${styles}</style>
+		<div class="wrapper" title="Toggle Light / Dark Mode" tabindex="0" role="button" aria-pressed="false">
 			<div class="icons">
 				<jb-icon icon="sun"></jb-icon>
 				<jb-icon icon="moon"></jb-icon>
@@ -93,25 +94,52 @@
 				super();
 				this.attachShadow({ mode: 'open' });
 				this.shadowRoot.innerHTML = template;
+				this.wrapper = this.shadowRoot.querySelector('.wrapper');
 				this.icons = this.shadowRoot.querySelector('.icons');
 				this.update_icons();
 			}
 
 			connectedCallback() {
-				this.addEventListener('click', this.onClick);
+				this.addEventListener('click', this.onSelect);
+				this.addEventListener('keydown', this.onKeydown);
+				this.addEventListener('keyup', this.onKeyup);
 			}
 			
 			disconnectedCallback() {
-				this.removeEventListener('click', this.onClick);
+				this.removeEventListener('click', this.onSelect);
+				this.removeEventListener('keydown', this.onKeydown);
+				this.removeEventListener('keyup', this.onKeyup);
 			}
 
-			onClick = () => {
+			onKeydown = (/** @type KeyboardEvent */ event) => {
+				if (event.keyCode === 32) {
+					event.preventDefault();
+				}
+
+
+				if (event.keyCode === 13) {
+					event.preventDefault();
+					this.onSelect();
+				}
+			};
+
+			onKeyup = (/** @type KeyboardEvent */ event) => {
+				if (event.keyCode === 32) {
+					event.preventDefault();
+					this.onSelect();
+				}
+			};
+
+			onSelect = () => {
 				toggle();
 				this.update_icons();
 			};
 
 			update_icons() {
-				this.icons.setAttribute('data-mode', get_current());
+				const current = get_current();
+
+				this.icons.setAttribute('data-mode', current);
+				this.wrapper.setAttribute('aria-pressed', current === 'dark');
 			}
 		}
 	);

@@ -9,7 +9,7 @@
 				width: 5rem;
 				height: 5rem;
 				border-radius: 100%;
-				background: var(--background-layer1);
+				background: var(--color-bg1);
 			}
 			
 			:host([type='small']) {

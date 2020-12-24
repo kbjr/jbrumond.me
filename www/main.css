@@ -7,7 +7,7 @@
 }
 
 body {
-	background: var(--background-main);
+	background: var(--color-bg-main);
 
 	/* NOTE: This style is added dynamically by JS */
 	/* transition: background linear .1s; */
@@ -49,6 +49,16 @@ main {
 
 
 
+/* ===== Links ===== */
+
+aside#links {
+	padding: 2rem;
+}
+
+
+
+
+
 /* ===== Typography ===== */
 
 h1, h2, h3, h4, h5, h6,
@@ -57,27 +67,28 @@ p, small, a, li, dt, dd {
 }
 
 h1 {
-	color: var(--text-heading);
+	color: var(--color-text-heading);
 	font-size: 3rem;
 	font-weight: 300;
 }
 
 p {
-	/*  */
+	color: var(--color-text-body);
+	font-size: 1.5rem;
 }
 
 a {
-	color: var(--text-link);
+	color: var(--color-text-link);
 }
 
 a:active,
 a:hover,
 a:focus {
-	color: var(--text-link-active);
+	color: var(--color-text-link-active);
 }
 
 a:visited {
-	color: var(--text-link-visited);
+	color: var(--color-text-link-visited);
 }
 
 
@@ -102,13 +113,13 @@ a:visited {
 	height: 200px;
 	margin: 50px;
 	border-radius: 4px;
-	background: var(--background-layer-light);
+	background: var(--color-bg-light);
 }
 
 .box2 {
-	background: var(--background-layer-heavy);
+	background: var(--color-bg-heavy);
 }
 
 .box3 {
-	background: var(--background-layer-accent);
+	background: var(--color-bg-accent);
 }
