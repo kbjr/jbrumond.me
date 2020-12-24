@@ -1,0 +1,72 @@
+
+:root {
+	color-scheme: light dark;
+}
+
+body {
+	/* Background colors */
+	--background-main: #fff;
+	--background-layer-light: rgba(100,100,100,0.1);
+	--background-layer-heavy: rgba(100,100,100,0.2);
+	--background-layer-accent: rgba(100,100,100,0.3);
+
+	/* Text colors */
+	--text-heading: #333;
+	--text-body: #444;
+	--text-light: #666;
+
+	--text-link: rgb(79, 99, 144);
+	--text-link-active: rgb(79, 99, 144);
+	--text-link-visited: rgb(79, 99, 144);
+}
+
+body[data-color-scheme='dark'] {
+	/* Background colors */
+	--background-main: #333;
+	--background-layer-light: rgba(255,255,255,0.1);
+	--background-layer-heavy: rgba(255,255,255,0.2);
+	--background-layer-accent: rgba(134, 167, 240, 0.3);
+
+	/* Text colors */
+	--text-heading: #fff;
+	--text-body: #bbb;
+	--text-light: #888;
+
+	--text-link: rgb(134, 167, 240);
+	--text-link-active: rgb(134, 167, 240);
+	--text-link-visited: rgb(134, 167, 240);
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		/* Background colors */
+		--background-main: #333;
+		--background-layer-light: rgba(255,255,255,0.1);
+		--background-layer-heavy: rgba(255,255,255,0.2);
+		--background-layer-accent: rgba(134, 167, 240, 0.3);
+	
+		/* Text colors */
+		--text-heading: #fff;
+		--text-body: #bbb;
+		--text-light: #888;
+	}
+
+	body[data-color-scheme='light'] {
+		/* Background colors */
+		--background-main: #fff;
+		--background-layer-light: rgba(100,100,100,0.1);
+		--background-layer-heavy: rgba(100,100,100,0.2);
+		--background-layer-accent: rgba(100,100,100,0.3);
+	
+		/* Text colors */
+		--text-heading: #333;
+		--text-body: #444;
+		--text-light: #666;
+	}
+}
+
+
+
+
+/* rgba(134, 167, 240, 0.3) */
+/* rgba(173, 199, 255, 0.3); */

@@ -1,0 +1,114 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--background-main);
+
+	/* NOTE: This style is added dynamically by JS */
+	/* transition: background linear .1s; */
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+}
+
+
+
+
+
+/* ===== Main Heading ===== */
+
+header {
+	padding: 2rem;
+	display: flex;
+	flex-direction: row;
+}
+
+	header > h1 {
+		flex-grow: 1;
+	}
+
+
+
+
+
+/* ===== Main Content ===== */
+
+main {
+	padding: 2rem;
+}
+
+
+
+
+
+/* ===== Typography ===== */
+
+h1, h2, h3, h4, h5, h6,
+p, small, a, li, dt, dd {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	color: var(--text-heading);
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+p {
+	/*  */
+}
+
+a {
+	color: var(--text-link);
+}
+
+a:active,
+a:hover,
+a:focus {
+	color: var(--text-link-active);
+}
+
+a:visited {
+	color: var(--text-link-visited);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper {
+	padding: 100px;
+	display: flex;
+}
+
+.box {
+	width: 200px;
+	height: 200px;
+	margin: 50px;
+	border-radius: 4px;
+	background: var(--background-layer-light);
+}
+
+.box2 {
+	background: var(--background-layer-heavy);
+}
+
+.box3 {
+	background: var(--background-layer-accent);
+}
