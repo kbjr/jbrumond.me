@@ -1,0 +1,23 @@
+{
+  "name": "jbrumond.me",
+  "version": "1.0.0",
+  "description": "The jbrumond.me website",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbjr/jbrumond.me.git"
+  },
+  "author": "James Brumond <james@jbrumond.me>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/kbjr/jbrumond.me/issues"
+  },
+  "homepage": "https://github.com/kbjr/jbrumond.me#readme",
+  "dependencies": {
+    "@celeri/http-server": "^2.1.0",
+    "node-static": "^0.7.11"
+  }
+}
