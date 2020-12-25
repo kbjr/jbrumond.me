@@ -1,0 +1,5 @@
+
+user-agent: *
+disallow: /random
+
+sitemap: https://www.jbrumond.me/sitemap.xml

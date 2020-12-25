@@ -1,10 +1,11 @@
 {
   "name": "jbrumond.me",
   "version": "1.0.0",
+  "private": true,
   "description": "The jbrumond.me website",
   "main": "start.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=dev node start.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,6 @@
     "@celeri/http-server": "^2.1.0",
     "@celeri/query-parser": "^2.1.0",
     "@celeri/request-logger": "^2.1.0",
-    "node-static": "^0.7.11"
+    "@celeri/static": "^1.0.3"
   }
 }
