@@ -6,7 +6,7 @@ const server = createServer();
 const static_www = new Server(__dirname + '/www');
 
 const host = '0.0.0.0';
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 server.use(server.router({
 	notFound: function notFoundHandler({ req, res }) {
