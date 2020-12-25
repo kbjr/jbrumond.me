@@ -18,6 +18,8 @@
   "homepage": "https://github.com/kbjr/jbrumond.me#readme",
   "dependencies": {
     "@celeri/http-server": "^2.1.0",
+    "@celeri/query-parser": "^2.1.0",
+    "@celeri/request-logger": "^2.1.0",
     "node-static": "^0.7.11"
   }
 }
