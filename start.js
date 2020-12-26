@@ -3,6 +3,7 @@ const { fileServer } = require('@celeri/static');
 const { createServer } = require('@celeri/http-server');
 const { queryParser } = require('@celeri/query-parser');
 const { requestLogger } = require('@celeri/request-logger');
+const { cacheControl } = require('@celeri/caching');
 const { random_buffer } = require('./rand');
 
 const host_placeholder = /\{\{host}}/g;
@@ -12,6 +13,7 @@ const port = process.env.PORT || 8080;
 const hostname_base = process.env.NODE_ENV === 'dev' ? 'localhost:8080' : 'jbrumond.me';
 
 const server = createServer();
+const caching = cacheControl({ maxAge: 3600 });
 
 const static_www = fileServer(__dirname + '/www', {
 	beforeSend: process_html
@@ -95,6 +97,8 @@ function process_html(file) {
 
 function serve_static_files({ req, res }) {
 	const host = req.headers['host'].toLowerCase();
+
+	caching({ req, res });
 
 	switch (host) {
 		case hostname_base:

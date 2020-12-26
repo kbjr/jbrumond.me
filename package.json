@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/kbjr/jbrumond.me#readme",
   "dependencies": {
+    "@celeri/caching": "^1.0.0",
     "@celeri/http-server": "^2.1.0",
     "@celeri/query-parser": "^2.1.0",
     "@celeri/request-logger": "^2.1.0",
