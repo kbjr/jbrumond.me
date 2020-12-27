@@ -82,6 +82,10 @@ p, small, a, li, dt, dd {
 	font-family: 'Open Sans', sans-serif;
 }
 
+code, pre {
+	font-family: 'Source Code Pro', monospace;
+}
+
 h1 {
 	color: var(--color-text-heading);
 	font-size: 3rem;

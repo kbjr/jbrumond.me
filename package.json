@@ -22,6 +22,7 @@
     "@celeri/http-server": "^2.1.0",
     "@celeri/query-parser": "^2.1.0",
     "@celeri/request-logger": "^2.1.0",
-    "@celeri/static": "^1.0.3"
+    "@celeri/static": "^1.0.3",
+    "showdown": "^1.9.1"
   }
 }

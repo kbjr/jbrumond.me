@@ -61,6 +61,8 @@ aside#links {
 
 /* ===== Typography ===== */
 
+/* TODO: Extract this to a shared css import ? */
+
 h1, h2, h3, h4, h5, h6,
 p, small, a, li, dt, dd {
 	font-family: 'Open Sans', sans-serif;
